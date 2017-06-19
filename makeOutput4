@@ -1,0 +1,138 @@
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/managedFlu'
+make[1]: 'All' is up to date.
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/managedFlu'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/OpenFOAM'
+make[1]: 'All' is up to date.
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/OpenFOAM'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/finiteVolume'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/meshTools/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c cfdTools/general/MRFZonesHolder.cpp -o cfdTools/general/MRFZonesHolder.o
+In file included from cfdTools/general/MRFZonesHolder.cpp:23:0:
+cfdTools/general/MRFZonesHolder.hpp:32:22: fatal error: MRFZones.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'cfdTools/general/MRFZonesHolder.o' failed
+make[1]: *** [cfdTools/general/MRFZonesHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/finiteVolume'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/dynamicFvMesh'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed dynamicFvMeshHolder.o  -lfiniteVolume -lmeshTools -ldynamicFvMesh -L/usr/local/src/managedFlu-master/lib -lmanagedFlu -lmanagedFlu-OpenFOAM -lmanagedFlu-finiteVolume -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms/linux64GccDPInt64Opt/lib -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms  -lstdc++  -lOpenFOAM  -o /usr/local/src/managedFlu-master/lib/libmanagedFlu-dynamicFvMesh.so;
+/usr/bin/ld: cannot find -lmanagedFlu-finiteVolume
+collect2: error: ld returned 1 exit status
+/usr/local/src/managedFlu-master/include.lib.makefile:46: recipe for target '/usr/local/src/managedFlu-master/lib/libmanagedFlu-dynamicFvMesh.so' failed
+make[1]: *** [/usr/local/src/managedFlu-master/lib/libmanagedFlu-dynamicFvMesh.so] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/dynamicFvMesh'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/randomProcesses'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed KmeshHolder.o UOprocessHolder.o  -lfiniteVolume -lmeshTools -lsampling -lrandomProcesses -L/usr/local/src/managedFlu-master/lib -lmanagedFlu -lmanagedFlu-OpenFOAM -lmanagedFlu-finiteVolume -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms/linux64GccDPInt64Opt/lib -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms  -lstdc++  -lOpenFOAM  -o /usr/local/src/managedFlu-master/lib/libmanagedFlu-randomProcesses.so;
+/usr/bin/ld: cannot find -lmanagedFlu-finiteVolume
+collect2: error: ld returned 1 exit status
+/usr/local/src/managedFlu-master/include.lib.makefile:46: recipe for target '/usr/local/src/managedFlu-master/lib/libmanagedFlu-randomProcesses.so' failed
+make[1]: *** [/usr/local/src/managedFlu-master/lib/libmanagedFlu-randomProcesses.so] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/randomProcesses'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/basic'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/basic/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c basicPsiThermoHolder.cpp -o basicPsiThermoHolder.o
+In file included from basicPsiThermoHolder.cpp:23:0:
+basicPsiThermoHolder.hpp:33:28: fatal error: basicPsiThermo.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'basicPsiThermoHolder.o' failed
+make[1]: *** [basicPsiThermoHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/basic'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/basicSolidThermo'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/solid/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/specie/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/basicSolidThermo/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c basicSolidThermoHolder.cpp -o basicSolidThermoHolder.o
+In file included from basicSolidThermoHolder.hpp:32:0,
+                 from basicSolidThermoHolder.cpp:23:
+lnInclude/basicSolidThermoHolder_020000.hpp:33:30: fatal error: basicSolidThermo.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'basicSolidThermoHolder.o' failed
+make[1]: *** [basicSolidThermoHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/basicSolidThermo'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/radiationModel'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed radiationModelHolder.o  -lfiniteVolume -lmeshTools -lradiationModels -L/usr/local/src/managedFlu-master/lib -lmanagedFlu -lmanagedFlu-OpenFOAM -lmanagedFlu-finiteVolume -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms/linux64GccDPInt64Opt/lib -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms  -lstdc++  -lOpenFOAM  -o /usr/local/src/managedFlu-master/lib/libmanagedFlu-radiationModels.so;
+/usr/bin/ld: cannot find -lmanagedFlu-finiteVolume
+collect2: error: ld returned 1 exit status
+/usr/local/src/managedFlu-master/include.lib.makefile:46: recipe for target '/usr/local/src/managedFlu-master/lib/libmanagedFlu-radiationModels.so' failed
+make[1]: *** [/usr/local/src/managedFlu-master/lib/libmanagedFlu-radiationModels.so] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/radiationModel'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/thermalPorousZone'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/basic/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/meshTools/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/thermalPorousZone/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c thermalPorousZonesHolder.cpp -o thermalPorousZonesHolder.o
+In file included from /usr/local/src/managedFlu-master/src/finiteVolume/lnInclude/PorousZonesHolder.hpp:32:0,
+                 from lnInclude/thermalPorousZonesHolder_020000.hpp:28,
+                 from thermalPorousZonesHolder.hpp:32,
+                 from thermalPorousZonesHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude/PorousZonesHolder_020000.hpp:32:25: fatal error: PorousZones.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'thermalPorousZonesHolder.o' failed
+make[1]: *** [thermalPorousZonesHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/thermophysicalModels/thermalPorousZone'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/transportModels/incompressible'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels/incompressible/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c transportModelHolder.cpp -o transportModelHolder.o
+transportModelHolder.cpp: In member function ‘void Foam::transportModelHolder::operator=(const boost::shared_ptr<Foam::transportModel>&)’:
+transportModelHolder.cpp:38:39: error: no matching function for call to ‘Foam::transportModelHolder::operator=(const boost::shared_ptr<Foam::transportModel>&)’
+     IOdictionaryHolder::operator=( bt );
+                                       ^
+In file included from transportModelHolder.hpp:28:0,
+                 from transportModelHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude/IOdictionaryHolder.hpp:61:10: note: candidate: void Foam::IOdictionaryHolder::operator=(const boost::shared_ptr<Foam::IOdictionary>&)
+     void operator=( const boost::shared_ptr< IOdictionary >& );
+          ^
+/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude/IOdictionaryHolder.hpp:61:10: note:   no known conversion for argument 1 from ‘const boost::shared_ptr<Foam::transportModel>’ to ‘const boost::shared_ptr<Foam::IOdictionary>&’
+/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude/IOdictionaryHolder.hpp:41:9: note: candidate: Foam::IOdictionaryHolder& Foam::IOdictionaryHolder::operator=(const Foam::IOdictionaryHolder&)
+   class IOdictionaryHolder 
+         ^
+/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude/IOdictionaryHolder.hpp:41:9: note:   no known conversion for argument 1 from ‘const boost::shared_ptr<Foam::transportModel>’ to ‘const Foam::IOdictionaryHolder&’
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'transportModelHolder.o' failed
+make[1]: *** [transportModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/transportModels/incompressible'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/transportModels/interfaceProperties'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -shared -Xlinker --add-needed -Xlinker --no-as-needed interfacePropertiesHolder.o  -lfiniteVolume -linterfaceProperties -ltwoPhaseInterfaceProperties -L/usr/local/src/managedFlu-master/lib -lmanagedFlu -lmanagedFlu-OpenFOAM -lmanagedFlu-finiteVolume -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms/linux64GccDPInt64Opt/lib -L/home/mihir/OpenFOAM/OpenFOAM-4.1/platforms  -lstdc++  -lOpenFOAM  -o /usr/local/src/managedFlu-master/lib/libmanagedFlu-interfaceProperties.so;
+/usr/bin/ld: cannot find -ltwoPhaseInterfaceProperties
+/usr/bin/ld: cannot find -lmanagedFlu-finiteVolume
+collect2: error: ld returned 1 exit status
+/usr/local/src/managedFlu-master/include.lib.makefile:46: recipe for target '/usr/local/src/managedFlu-master/lib/libmanagedFlu-interfaceProperties.so' failed
+make[1]: *** [/usr/local/src/managedFlu-master/lib/libmanagedFlu-interfaceProperties.so] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/transportModels/interfaceProperties'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/usr/local/src/managedFlu-master/src/thermophysicalModels/basic/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/basic/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/compressible/RAS/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/compressible/turbulenceModel/lnInclude  -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c turbulenceModelHolder.cpp -o turbulenceModelHolder.o
+In file included from turbulenceModelHolder.hpp:32:0,
+                 from turbulenceModelHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel/lnInclude/turbulenceModelHolder_020000.hpp:34:58: fatal error: compressible/turbulenceModel/turbulenceModel.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'turbulenceModelHolder.o' failed
+make[1]: *** [turbulenceModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/RAS'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/usr/local/src/managedFlu-master/src/thermophysicalModels/basic/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/RAS/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/thermophysicalModels/basic/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/compressible/RAS/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/compressible/turbulenceModel/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c RASModelHolder.cpp -o RASModelHolder.o
+In file included from /usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel/turbulenceModelHolder.hpp:32:0,
+                 from /usr/local/src/managedFlu-master/src/turbulenceModels/compressible/RAS/lnInclude/RASModelHolder_020000.hpp:30,
+                 from RASModelHolder.hpp:32,
+                 from RASModelHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/turbulenceModel/lnInclude/turbulenceModelHolder_020000.hpp:34:58: fatal error: compressible/turbulenceModel/turbulenceModel.H: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'RASModelHolder.o' failed
+make[1]: *** [RASModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/turbulenceModels/compressible/RAS'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/usr/local/src/managedFlu-master/src/transportModels/incompressible/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels/incompressible/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/LES/LESdeltas/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c turbulenceModelHolder.cpp -o turbulenceModelHolder.o
+In file included from turbulenceModelHolder.cpp:23:0:
+turbulenceModelHolder.hpp:32:46: fatal error: turbulenceModelHolder_020000. hpp: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'turbulenceModelHolder.o' failed
+make[1]: *** [turbulenceModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/RAS'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/usr/local/src/managedFlu-master/src/transportModels/incompressible/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/RAS/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels/incompressible/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/LES/LESdeltas/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c RASModelHolder.cpp -o RASModelHolder.o
+In file included from /usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/RAS/lnInclude/RASModelHolder_020000.hpp:30:0,
+                 from RASModelHolder.hpp:32,
+                 from RASModelHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel/lnInclude/turbulenceModelHolder.hpp:32:46: fatal error: turbulenceModelHolder_020000. hpp: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'RASModelHolder.o' failed
+make[1]: *** [RASModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/RAS'
+make[1]: Entering directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/LES'
+g++ -std=c++0x -m64 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=64 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3 -DNoRepository -ftemplate-depth-100 -fPIC -ftemplate-depth-40  -I/usr/local/src/managedFlu-master/src -I/usr/local/src/managedFlu-master/src/managedFlu/lnInclude -I/usr/local/src/managedFlu-master/src/OpenFOAM/lnInclude -I/usr/local/src/managedFlu-master/src/finiteVolume/lnInclude -I/usr/local/src/managedFlu-master/src/transportModels/incompressible/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel/lnInclude -I/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/LES/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/finiteVolume/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels/incompressible/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/transportModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/turbulenceModels/LES/LESdeltas/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM/lnInclude -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src -I/home/mihir/OpenFOAM/OpenFOAM-4.1/src/OSspecific/POSIX/lnInclude -D__FOAM_VERSION__=040100  -I/usr/local/src/managedFlu-master/src  -I/usr/include/c++ -IlnInclude  -c LESModelHolder.cpp -o LESModelHolder.o
+In file included from /usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/LES/lnInclude/LESModelHolder_020000.hpp:30:0,
+                 from LESModelHolder.hpp:32,
+                 from LESModelHolder.cpp:23:
+/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/turbulenceModel/lnInclude/turbulenceModelHolder.hpp:32:46: fatal error: turbulenceModelHolder_020000. hpp: No such file or directory
+compilation terminated.
+/usr/local/src/managedFlu-master/include.lib.makefile:37: recipe for target 'LESModelHolder.o' failed
+make[1]: *** [LESModelHolder.o] Error 1
+make[1]: Leaving directory '/usr/local/src/managedFlu-master/src/turbulenceModels/incompressible/LES'
